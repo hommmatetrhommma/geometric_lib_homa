@@ -20,3 +20,21 @@ class CircleTestCase(unittest.TestCase):
         res = perimeter(10)
         expected = 2 * math.pi * 10
         self.assertEqual(res, expected)
+    
+    def test_area_negative_radius(self):
+        self.assertRaises(ValueError, area, -5)
+    
+    def test_perimeter_negative_radius(self):
+        self.assertRaises(ValueError, perimeter, -5)
+    
+    def test_area_string_input(self):
+        self.assertRaises(TypeError, area, "10")
+    
+    def test_perimeter_string_input(self):
+        self.assertRaises(TypeError, perimeter, "10")
+    
+    def test_area_zero_radius(self):
+        self.assertEqual(area(0), 0)
+    
+    def test_perimeter_zero_radius(self):
+        self.assertEqual(perimeter(0), 0)

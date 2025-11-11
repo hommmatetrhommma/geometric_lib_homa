@@ -16,3 +16,24 @@ class RectangleTestCase(unittest.TestCase):
     def test_rectangle_perimeter(self):
         res = perimeter(10, 5)
         self.assertEqual(res, 30)
+    
+    def test_area_negative_side_a(self):
+        self.assertRaises(ValueError, area, -5, 3)
+    
+    def test_area_negative_side_b(self):
+        self.assertRaises(ValueError, area, 5, -3)
+    
+    def test_area_both_negative(self):
+        self.assertRaises(ValueError, area, -5, -3)
+    
+    def test_area_string_input(self):
+        self.assertRaises(TypeError, area, "10", 5)
+
+    def test_perimeter_negative_side_a(self):
+        self.assertRaises(ValueError, perimeter, -5, 3)
+    
+    def test_perimeter_negative_side_b(self):
+        self.assertRaises(ValueError, perimeter, 5, -3)
+    
+    def test_perimeter_both_negative(self):
+        self.assertRaises(ValueError, perimeter, -5, -3)
