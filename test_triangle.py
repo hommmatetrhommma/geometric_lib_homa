@@ -1,5 +1,5 @@
 import unittest
-from triangle import area, perimeter
+from triangle import area, perimeter, true
 
 class TriangleTestCase(unittest.TestCase):
     def test_zero_area(self):
@@ -41,3 +41,8 @@ class TriangleTestCase(unittest.TestCase):
     
     def test_area_string_input(self):
         self.assertRaises(TypeError, area, "10", 5)
+    def test_triangle_true(self):
+        res=true(3,7,5)
+        self.assertEqual(res, True)
+    def test_triangle_false(self):
+        self.assertRaises(ValueError,true, 3, 7, 4)

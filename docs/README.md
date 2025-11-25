@@ -55,6 +55,6 @@
 - Square: P = 4a
 
 ## commit history
-- 44b4568 - adding documentation for area and perimeter counting functions
+- 6c86044 - adding documentation for area and perimeter counting functions
 - 4e6b786 - adding function descriptions and calling examples to the readme
 - a047c52 - added unit tests for all shapes

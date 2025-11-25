@@ -9,3 +9,8 @@ def perimeter(a, b, c):
     if a < 0 or b < 0 or c < 0:
         raise ValueError("Стороны не могут быть отрицательными")
     return a + b + c 
+def true(a,b,c):
+    if (a+b>c) and (a+c>b) and (b+c>a):
+        return True
+    else:
+        raise ValueError("треугольник должен сущестовать")
