@@ -37,3 +37,7 @@ class RectangleTestCase(unittest.TestCase):
     
     def test_perimeter_both_negative(self):
         self.assertRaises(ValueError, perimeter, -5, -3)
+    
+    def test_rectangle_area(self):
+        res = area(10, 6)
+        self.assertEqual(res, 60)
